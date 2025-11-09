@@ -74,9 +74,7 @@ class Request {
     if (tkn) {
       token = decryptString(tkn);
     }
-console.log('====================================');
-console.log(token);
-console.log('====================================');
+
     try {
       const response = await request
         .post(baseUrl + url)

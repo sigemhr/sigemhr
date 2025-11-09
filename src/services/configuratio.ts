@@ -4,12 +4,11 @@
 // **productionapi
 // "homepage": "https://sil83.com/", //poner un package.json
 export const productionMode:string = 'development';
-
 let pathApiBase
 let pathImages
 let pathBase
 let pathLogOutBase
-// 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
+
 switch (productionMode) {
     case 'development':
         pathApiBase ="http://192.168.101.104/hr_system/public/api/";
@@ -36,28 +35,5 @@ export const pathApi=pathApiBase;
 export const path=pathBase;
 export const pathLogOut=pathLogOutBase;
 export const pathImagesb=pathImages;
-// #Listen 12.34.56.78:80
-// Listen 80
-// silsoftware83
-// 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
-// VSzONcle
 
-// MAIL_MAILER=smtp
-// MAIL_HOST=mail.notaria83qroo.mx
-// MAIL_PORT=587
-// MAIL_USERNAME=no_reply@notaria83qroo.mx
-// MAIL_PASSWORD=L+9<UAK0xpOr12%D
-// MAIL_ENCRYPTION=tls
-// MAIL_EHLO_DOMAIN=sil83.com
-// MAIL_FROM_ADDRESS="no_reply@notaria83qroo.mx"
-// MAIL_FROM_NAME="${APP_NAME}"
 
-// MAIL_MAILER=smtp
-// MAIL_HOST=mail.sil83.com
-// MAIL_PORT=465
-// MAIL_USERNAME=no_reply@sil83.com
-// MAIL_PASSWORD=ioX08h*npSnd
-// MAIL_ENCRYPTION=ssl
-// MAIL_EHLO_DOMAIN=sil83.com
-// MAIL_FROM_ADDRESS="no_reply@sil83.com"
-// MAIL_FROM_NAME="${APP_NAME}"
