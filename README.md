@@ -1,73 +1,135 @@
-# React + TypeScript + Vite
+# Sistema de Recursos Humanos
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Un sistema moderno de gestión de recursos humanos construido con tecnologías web de última generación.
 
-Currently, two official plugins are available:
+## 🚀 Tecnologías
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 18** con TypeScript
+- **Vite** - Build tool ultrarrápido
+- **Tailwind CSS** - Framework de CSS utility-first
+- **TSX** - TypeScript + JSX
 
-## React Compiler
+## 📋 Características
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Gestión de empleados
+- Control de asistencias
+- Administración de nómina
+- Gestión de vacaciones y permisos
+- Evaluaciones de desempeño
+- Módulo de reclutamiento
+- Reportes y analíticas
 
-## Expanding the ESLint configuration
+## 🛠️ Instalación
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Prerrequisitos
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- Node.js 18 o superior
+- npm o yarn
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Pasos de instalación
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. Clona el repositorio:
+```bash
+git clone https://github.com/tu-usuario/sistema-rh.git
+cd sistema-rh
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Instala las dependencias:
+```bash
+npm install
 ```
+
+3. Crea un archivo `.env` basado en `.env.example`:
+```bash
+cp .env.example .env
+```
+
+4. Configura las variables de entorno necesarias en el archivo `.env`
+
+## 🚦 Uso
+
+### Modo desarrollo
+
+```bash
+npm run dev
+```
+
+El servidor de desarrollo estará disponible en `http://localhost:5173`
+
+### Build para producción
+
+```bash
+npm run build
+```
+
+### Preview del build
+
+```bash
+npm run preview
+```
+
+### Linting
+
+```bash
+npm run lint
+```
+
+## 📁 Estructura del proyecto
+
+```
+sistema-rh/
+├── src/
+│   ├── assets/          # Recursos estáticos
+│   ├── components/      # Componentes reutilizables
+│   ├── pages/          # Páginas de la aplicación
+│   ├── hooks/          # Custom hooks
+│   ├── services/       # Servicios y API calls
+│   ├── types/          # Definiciones de TypeScript
+│   ├── utils/          # Funciones utilitarias
+│   ├── App.tsx         # Componente principal
+│   └── main.tsx        # Punto de entrada
+├── public/             # Archivos públicos
+├── index.html
+├── package.json
+├── tsconfig.json
+├── vite.config.ts
+└── tailwind.config.js
+```
+
+## 🎨 Configuración de Tailwind
+
+El proyecto utiliza Tailwind CSS con configuración personalizada. Puedes modificar los estilos en `tailwind.config.js`.
+
+## 🔧 Scripts disponibles
+
+- `npm run dev` - Inicia el servidor de desarrollo
+- `npm run build` - Genera el build de producción
+- `npm run preview` - Previsualiza el build de producción
+- `npm run lint` - Ejecuta el linter
+- `npm run type-check` - Verifica los tipos de TypeScript
+
+## 🤝 Contribución
+
+Las contribuciones son bienvenidas. Por favor:
+
+1. Fork el proyecto
+2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
+3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
+4. Push a la rama (`git push origin feature/AmazingFeature`)
+5. Abre un Pull Request
+
+## 📝 Licencia
+
+Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+
+## 👥 Autores
+
+- Tu Nombre - [@sigemhr](https://github.com/sigemhr)
+
+## 📞 Contacto
+
+Para preguntas o soporte, contacta a: sigemhr@gmail.com
+
+---
+
+Desarrollado con ❤️ usando React + Vite + Tailwind CSS
