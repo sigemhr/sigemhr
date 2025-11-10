@@ -3,7 +3,7 @@
 // **testing
 // **productionapi
 // "homepage": "https://sil83.com/", //poner un package.json
-export const productionMode:string = 'development';
+export const productionMode:string = 'working';
 let pathApiBase
 let pathImages
 let pathBase
@@ -13,6 +13,13 @@ switch (productionMode) {
     case 'development':
         pathApiBase ="http://192.168.101.104/hr_system/public/api/";
         pathImages ="http://192.168.101.104/hr_system/public/";
+        // pathImages = 'https://apisil.sil83.com/api/';
+        pathBase = ''
+        pathLogOutBase = '/'
+        break;
+    case 'working':
+        pathApiBase ="http://192.168.1.64/hr_system/public/api/";
+        pathImages ="http://192.168.1.64/hr_system/public/";
         // pathImages = 'https://apisil.sil83.com/api/';
         pathBase = ''
         pathLogOutBase = '/'
