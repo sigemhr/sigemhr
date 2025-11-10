@@ -18,8 +18,8 @@ switch (productionMode) {
         pathLogOutBase = '/'
         break;
     case 'working':
-        pathApiBase ="http://192.168.1.64/hr_system/public/api/";
-        pathImages ="http://192.168.1.64/hr_system/public/";
+        pathApiBase ="http://192.168.1.64/sigemhrapi/public/api/";
+        pathImages ="http://192.168.1.64/sigemhrapi/public/";
         // pathImages = 'https://apisil.sil83.com/api/';
         pathBase = ''
         pathLogOutBase = '/'
@@ -38,9 +38,9 @@ switch (productionMode) {
         
 }
 
-export const pathApi=pathApiBase;
-export const path=pathBase;
-export const pathLogOut=pathLogOutBase;
-export const pathImagesb=pathImages;
+export const pathApi: string =pathApiBase;
+export const path:string=pathBase;
+export const pathLogOut:string=pathLogOutBase;
+export const pathImagesb:string=pathImages;
 
 
