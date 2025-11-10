@@ -68,7 +68,7 @@ export type { ToastType, Toast } from './Types';
 // ├── useToast.ts        # Hook personalizado
 // ├── ToastItem.tsx      # Componente del toast individual
 // ├── ToastProvider.tsx  # Provider del contexto
-// └── index.ts           # Exportaciones públicas
+// └── const.ts           # Exportaciones públicas
 
 // App.tsx                # Tu aplicación`}
 //             </pre>

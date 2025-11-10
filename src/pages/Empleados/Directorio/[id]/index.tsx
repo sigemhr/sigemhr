@@ -1,6 +1,6 @@
 // Detalle del elemento seleccionado de Directorio
 
-import React, { useState, type ChangeEvent, type FormEvent } from "react";
+import  { useState, type ChangeEvent, type FormEvent } from "react";
 import { User, Mail, Phone, MapPin, Briefcase, FileText, CreditCard, Camera, Save, X, AlertCircle } from "lucide-react";
 
 // Props / Types
@@ -50,13 +50,7 @@ export type Employee = {
   actualizado_por?: number | null;
 };
 
-type Props = {
-  initial?: Partial<Employee>;
-  onSubmit: (payload: Employee) => Promise<void> | void;
-  onCancel?: () => void;
-  departamentos?: { id: number; nombre: string }[];
-  puestos?: { id: number; nombre: string }[];
-};
+
 
 export default function DirectorioDetalle() {
   const initial: Partial<Employee> = {};
@@ -107,7 +101,7 @@ export default function DirectorioDetalle() {
   });
 
   const [errors, setErrors] = useState<Record<string, string>>({});
-  const [submitting, setSubmitting] = useState(false);
+  const [submitting, setSubmitting] = useState<boolean>(false);
 
   function handleChange(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) {
     const { name, value, type } = e.target as HTMLInputElement;
@@ -132,20 +126,21 @@ export default function DirectorioDetalle() {
     reader.readAsDataURL(file);
   }
 
-  function validate(): boolean {
-    const err: Record<string, string> = {};
-    if (!form.nombre.trim()) err.nombre = "El nombre es obligatorio";
-    if (!form.apellido_paterno?.trim()) err.apellido_paterno = "El apellido paterno es obligatorio";
-    if (!form.correo_electronico?.trim()) err.correo_electronico = "El correo es obligatorio";
-    if (form.correo_electronico && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.correo_electronico)) err.correo_electronico = "Correo inválido";
-    if (!form.numero_empleado?.trim()) err.numero_empleado = "Número de empleado es obligatorio";
-    setErrors(err);
-    return Object.keys(err).length === 0;
-  }
-  
+  // function validate(): boolean {
+  //   const err: Record<string, string> = {};
+  //   if (!form.nombre.trim()) err.nombre = "El nombre es obligatorio";
+  //   if (!form.apellido_paterno?.trim()) err.apellido_paterno = "El apellido paterno es obligatorio";
+  //   if (!form.correo_electronico?.trim()) err.correo_electronico = "El correo es obligatorio";
+  //   if (form.correo_electronico && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(form.correo_electronico)) err.correo_electronico = "Correo inválido";
+  //   if (!form.numero_empleado?.trim()) err.numero_empleado = "Número de empleado es obligatorio";
+  //   setErrors(err);
+  //   return Object.keys(err).length === 0;
+  // }
+  //
 
-  async function handleSubmit(e: FormEvent) {
-    // e.preventDefault();
+  async function handleSubmit(e: FormEvent):Promise<void>  {
+     e.preventDefault();
+      setSubmitting(true)
     // if (!validate()) return;
     // setSubmitting(true);
     // try {

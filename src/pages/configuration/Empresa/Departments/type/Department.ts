@@ -1,4 +1,4 @@
-import type { Personal } from "./Persona";
+import type { Personal } from "../../../../Empleados/Directorio/types/Persona.ts";
 
 
 export interface Puesto {

@@ -1,5 +1,5 @@
 // services/colaboradorService.ts
-import Request from "../../../../services/http";
+import Request, {type Response} from "../../../../services/http";
 import type { EmpleadoResponse,  Personal } from "../types/Persona";
 
 const request = new Request();
@@ -36,9 +36,9 @@ export class ColaboradorService {
   async delete(id: number | string): Promise<void> {
     await request.delete(`${baseURL}/${id}`);
   }
-  async getdepartmentsAndPositions(){
-     const response = await request.get(`departmentsandgroups/getDepartmensAnGroups`, {});
-    return response.result
+  async getdepartmentsAndPositions():Promise<Response>{
+     return await request.get(`departmentsandgroups/getDepartmensAnGroups`, {});
+
   }
 }
 

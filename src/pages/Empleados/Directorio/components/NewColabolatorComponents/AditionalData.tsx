@@ -1,11 +1,12 @@
 import type { CreatePersonalDTO } from "../../types/Persona"
+import React from "react";
 
 interface PersonalDataFormProps {
-  newColaborator: CreatePersonalDTO
+    newColaborator: CreatePersonalDTO
     handleChange: (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement >) => void
    
 }
-export const AditionalData = ({ newColaborator, handleChange }: PersonalDataFormProps) => {
+export const AditionalData: ({newColaborator, handleChange}: PersonalDataFormProps) => React.JSX.Element = ({ newColaborator, handleChange }: PersonalDataFormProps):React.JSX.Element => {
   return (
      <div className="space-y-6">
                  <div>

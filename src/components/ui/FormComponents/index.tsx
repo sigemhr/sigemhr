@@ -1,5 +1,5 @@
 import React, { type InputHTMLAttributes, type TextareaHTMLAttributes, type SelectHTMLAttributes, forwardRef } from 'react';
-import { Eye, EyeOff, AlertCircle, Check } from 'lucide-react';
+import { Eye, EyeOff, AlertCircle } from 'lucide-react';
 
 // ============================================
 // TIPOS Y INTERFACES

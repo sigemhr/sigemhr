@@ -24,9 +24,11 @@ export const authService = {
     
   
 
-  register: async (name: string, email: string, password: string): Promise<User> => {
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  register: async (name: string, email: string, _password: string): Promise<User> => {
+      
     // Simula una llamada a API
-    return new Promise((resolve) => {
+    return new Promise((resolve: (value: (PromiseLike<User> | any)) => void):void => {
       setTimeout(() => {
         // Aquí conectarías con tu backend real
         const user: User = {

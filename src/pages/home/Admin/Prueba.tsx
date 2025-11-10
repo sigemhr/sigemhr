@@ -1,5 +1,5 @@
 import  { useState } from 'react';
-import { Calendar, Clock, TrendingUp, Users, FileText, CheckSquare, Bell, Briefcase, Award, AlertCircle, MessageSquare, Plus, X } from 'lucide-react';
+import { Calendar, Clock, TrendingUp, Users, FileText, CheckSquare, Bell, Briefcase, Award,  MessageSquare, Plus, X } from 'lucide-react';
 
 export default function HRDashboard() {
   const [reminders, setReminders] = useState([

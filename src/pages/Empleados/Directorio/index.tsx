@@ -1,4 +1,4 @@
-import { Archive, Eye, Pencil, ShieldPlusIcon, ShieldUserIcon, Trash2 } from "lucide-react";
+import { Archive,  Pencil,  ShieldUserIcon,  } from "lucide-react";
 import Container from "../../../components/ui/Container";
 import { DataTable, type Column } from "../../../components/ui/DataTableSigem";
 import { formatDate } from "../../../services/helpers/datesFunctions";
@@ -79,7 +79,7 @@ export default function DirectorioPage() {
       key: 'sis',
       header: 'Acciones',
       width: 'w-64',
-      render: (row) => (
+      render: (_row) => (
         ///botones de ver,editar y dar de baja
         <div className="flex items-center gap-3">
         

@@ -43,7 +43,7 @@ const CrearEmpleado = () => {
     {
       id: "laboral",
       label: "🏢 Datos Laborales",
-      content: <AditionalData {...{ newColaborator, handleChange, errors }} />,
+      content: <AditionalData {...{ newColaborator, handleChange, errors }} />
     },
   ];
   return (

@@ -11,6 +11,7 @@ import AccessControl from '../pages/configuration/AccessControl';
 import DirectorioPage from '../pages/Empleados/Directorio';
 import DirectorioDetalle from '../pages/Empleados/Directorio/[id]';
 import CrearEmpleado from '../pages/Empleados/Directorio/nuevo';
+import Departments from "../pages/configuration/Empresa/Departments";
 
 const AppRouter: React.FC = () => {
   return (
@@ -31,7 +32,10 @@ const AppRouter: React.FC = () => {
                <Route path='/empleados/directorio' element={<DirectorioPage />}/>
                <Route path='/empleados/nuevo' element={<CrearEmpleado />} />
                 <Route path='/empleados/:id' element={<DirectorioDetalle />}/>
-             
+
+                {/*rutas de configuraciones*/}
+                <Route path='/configuracion/empresa/departamentos' element={<Departments/>}/>
+
             </Route>
 
           </Route>
