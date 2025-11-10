@@ -13,7 +13,7 @@ export const useDepartment = () => {
     const [vista, setVista] = useState<string>(VISTA); // lista, agregar, editar
     const [loading, setLoading] = useState<boolean>(false)
     const [err, setErr] = useState<null | Error>(null)
-    const [expandido, setExpandido] = useState({});
+   
 
     const fetchDepartments = async () => {
         try {
@@ -31,12 +31,10 @@ export const useDepartment = () => {
         }
     }
 
-    const toggleExpand = (id) => {
-        setExpandido(prev => ({ ...prev, [id]: !prev[id] }));
-    };
+   
 
     useEffect(():void=>{
        fetchDepartments()
     },[])
-    return {err,departments,loading,vista, setVista,expandido,toggleExpand,setSearchTerm,setFiltroActivo,searchTerm,filtroActivo}
+    return {err,departments,loading,vista, setVista,setSearchTerm,setFiltroActivo,searchTerm,filtroActivo}
 }

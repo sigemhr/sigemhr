@@ -649,6 +649,7 @@ export const Switch = forwardRef<HTMLInputElement, SwitchProps>(
       <div className={containerClassName}>
         <div className="flex items-start gap-3">
           <button
+          title='e'
             type="button"
             role="switch"
             aria-checked={checked}

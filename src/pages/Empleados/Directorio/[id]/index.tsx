@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // Detalle del elemento seleccionado de Directorio
 
 import  { useState, type ChangeEvent, type FormEvent } from "react";
@@ -183,7 +184,7 @@ export default function DirectorioDetalle() {
               )}
               <label className="absolute bottom-0 right-0 bg-blue-500 hover:bg-blue-600 text-white p-2 rounded-full cursor-pointer shadow-lg transition-colors">
                 <Camera className="w-4 h-4" />
-                <input type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
+                <input title='d' type="file" accept="image/*" onChange={handleFileChange} className="hidden" />
               </label>
             </div>
             <span className="text-xs text-gray-500">Cambiar foto</span>
@@ -271,12 +272,12 @@ export default function DirectorioDetalle() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div>
             <label className={labelClass}>Fecha de nacimiento</label>
-            <input name="fecha_nacimiento" type="date" value={form.fecha_nacimiento ?? ""} onChange={handleChange} className={inputClass} />
+            <input title='d'  name="fecha_nacimiento" type="date" value={form.fecha_nacimiento ?? ""} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
             <label className={labelClass}>Sexo</label>
-            <select name="sexo" value={form.sexo ?? ""} onChange={handleChange} className={inputClass}>
+            <select title='d'  name="sexo" value={form.sexo ?? ""} onChange={handleChange} className={inputClass}>
               <option value="">--Seleccione--</option>
               <option value="masculino">Masculino</option>
               <option value="femenino">Femenino</option>
@@ -344,7 +345,7 @@ export default function DirectorioDetalle() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
           <div>
             <label className={labelClass}>Departamento</label>
-            <select name="departamento_id" value={form.departamento_id ?? ""} onChange={handleChange} className={inputClass}>
+            <select title='d'  name="departamento_id" value={form.departamento_id ?? ""} onChange={handleChange} className={inputClass}>
               <option value="">--Seleccione--</option>
               {/* {departamentos.map((d) => (
                 <option key={d.id} value={d.id}>{d.nombre}</option>
@@ -354,7 +355,7 @@ export default function DirectorioDetalle() {
 
           <div>
             <label className={labelClass}>Puesto</label>
-            <select name="puesto_id" value={form.puesto_id ?? ""} onChange={handleChange} className={inputClass}>
+            <select title='d' name="puesto_id" value={form.puesto_id ?? ""} onChange={handleChange} className={inputClass}>
               <option value="">--Seleccione--</option>
               {/* {puestos.map((p) => (
                 <option key={p.id} value={p.id}>{p.nombre}</option>
@@ -364,17 +365,17 @@ export default function DirectorioDetalle() {
 
           <div>
             <label className={labelClass}>Fecha de contratación</label>
-            <input name="fecha_contratacion" type="date" value={form.fecha_contratacion ?? ""} onChange={handleChange} className={inputClass} />
+            <input title='d' name="fecha_contratacion" type="date" value={form.fecha_contratacion ?? ""} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
             <label className={labelClass}>Fecha de baja</label>
-            <input name="fecha_baja" type="date" value={form.fecha_baja ?? ""} onChange={handleChange} className={inputClass} />
+            <input title='d' name="fecha_baja" type="date" value={form.fecha_baja ?? ""} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
             <label className={labelClass}>Tipo de contrato</label>
-            <select name="tipo_contrato" value={form.tipo_contrato} onChange={handleChange} className={inputClass}>
+            <select title='d' name="tipo_contrato" value={form.tipo_contrato} onChange={handleChange} className={inputClass}>
               <option value="tiempo completo">Tiempo completo</option>
               <option value="medio tiempo">Medio tiempo</option>
               <option value="temporal">Temporal</option>
@@ -385,7 +386,7 @@ export default function DirectorioDetalle() {
 
           <div>
             <label className={labelClass}>Turno</label>
-            <select name="turno" value={form.turno ?? ""} onChange={handleChange} className={inputClass}>
+            <select title='d'  name="turno" value={form.turno ?? ""} onChange={handleChange} className={inputClass}>
               <option value="">--Seleccione--</option>
               <option value="matutino">Matutino</option>
               <option value="vespertino">Vespertino</option>
@@ -396,7 +397,7 @@ export default function DirectorioDetalle() {
 
           <div>
             <label className={labelClass}>Estatus</label>
-            <select name="estatus" value={form.estatus} onChange={handleChange} className={inputClass}>
+            <select title='d' name="estatus" value={form.estatus} onChange={handleChange} className={inputClass}>
               <option value="activo">Activo</option>
               <option value="inactivo">Inactivo</option>
               <option value="baja">Baja</option>
@@ -415,12 +416,12 @@ export default function DirectorioDetalle() {
 
           <div>
             <label className={labelClass}>Días de vacaciones</label>
-            <input name="dias_vacaciones" type="number" value={form.dias_vacaciones ?? 0} onChange={handleChange} className={inputClass} />
+            <input title='d'  name="dias_vacaciones" type="number" value={form.dias_vacaciones ?? 0} onChange={handleChange} className={inputClass} />
           </div>
 
           <div>
             <label className={labelClass}>Días restantes</label>
-            <input name="dias_restantes_vacaciones" type="number" value={form.dias_restantes_vacaciones ?? 0} onChange={handleChange} className={inputClass} />
+            <input title='d'  name="dias_restantes_vacaciones" type="number" value={form.dias_restantes_vacaciones ?? 0} onChange={handleChange} className={inputClass} />
           </div>
 
           <div className="md:col-span-2 lg:col-span-4 flex flex-wrap items-center gap-6 pt-2">
