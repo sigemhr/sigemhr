@@ -12,7 +12,7 @@ export const useDepartment = () => {
     const [filtroActivo, setFiltroActivo] = useState(FILTER_TERM);
     const [vista, setVista] = useState<string>(VISTA); // lista, agregar, editar
     const [loading, setLoading] = useState<boolean>(false)
-    const [err, setErr] = useState<any>(null)
+    const [err, setErr] = useState<null | Error>(null)
     const [expandido, setExpandido] = useState({});
 
     const fetchDepartments = async () => {
@@ -25,7 +25,9 @@ export const useDepartment = () => {
                 setDepartments(respuesta.result.data)
             }
         } catch (error) {
-            setErr(error)
+            setErr(error as Error)
+        } finally {
+            setLoading(false)
         }
     }
 
