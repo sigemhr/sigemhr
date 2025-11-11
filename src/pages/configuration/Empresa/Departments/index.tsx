@@ -3,11 +3,13 @@ import { useTheme } from "../../../../context/ThemeContext.tsx";
 import { HeaderDepartment } from "./components/Header.tsx";
 import { useDepartment } from "./hooks/useDepartment.ts";
 import { Building2, Users, Briefcase, Plus, Edit2, Trash2 } from 'lucide-react';
-
-
-
+import Container from "../../../../components/ui/Container.tsx";
+import {H3, P, Span} from "../../../../components/ui/TextComponents";
+import { useNavigate} from "react-router-dom";
+import type {Departamento} from "./type/Department.ts";
 
 export default function Departments() {
+    const navigate:any = useNavigate();
     const { darkMode } = useTheme();
     const {
         departments,
@@ -18,16 +20,17 @@ export default function Departments() {
         filtroActivo
     } = useDepartment()
 
+    const handleRedirect = (departamento:Departamento) => {
+        navigate('/configuracion/empresa/departamentos/editar', {
+            state: { departamento }
+        });
 
-
-
+    }
     return (
-        <div className={`min-h-screen rounded-2xl ${darkMode ? 'bg-gray-800' : 'bg-gray-50'} p-6`}>
+        <Container className={`min-h-screen rounded-2xl  p-6`} darkMode={darkMode}>
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <HeaderDepartment setVista={setVista} darkMode={darkMode} searchTerm={searchTerm} setSearchTerm={setSearchTerm} filtroActivo={filtroActivo} setFiltroActivo={setFiltroActivo} />
-
-
                 {/* Lista de departamentos */}
                 <div className="space-y-4">
                     {departments.map(dep => (
@@ -36,40 +39,41 @@ export default function Departments() {
                                 <div className="flex items-start justify-between">
                                     <div className="flex-1">
                                         <div className="flex items-center gap-3 mb-2">
-                                            <h3 className="text-xl font-semibold text-gray-900">{dep.nombre}</h3>
-                                            <span
+                                            <H3 className="text-xl font-semibold " darkMode={darkMode} >{dep.nombre}</H3>
+                                            <Span
                                                 className="px-3 py-1 bg-blue-100 text-blue-800 text-sm font-medium rounded-full">
                                                 {dep.codigo}
-                                            </span>
-                                            <span className={`px-3 py-1 text-sm font-medium rounded-full ${dep.activo
+                                            </Span>
+                                            <Span className={`px-3 py-1 text-sm font-medium rounded-full ${dep.activo
                                                 ? 'bg-green-100 text-green-800'
                                                 : 'bg-red-100 text-red-800'
                                                 }`}>
                                                 {dep.activo ? 'Activo' : 'Inactivo'}
-                                            </span>
+                                            </Span>
                                         </div>
-                                        <p className="text-gray-600 mb-4">{dep.descripcion}</p>
+                                        <P darkMode={darkMode} className=" mb-4">{dep.descripcion}</P>
 
 
                                         <div className="flex items-center gap-6 text-sm">
                                             <div className="flex items-center gap-2">
                                                 <Users className="w-4 h-4 text-gray-400" />
-                                                <span className="text-gray-600">Jefe:</span>
-                                                <span className="font-medium text-gray-900">{dep.jefe?.nombre} {dep.jefe?.apellido_paterno}</span>
+                                                <Span  darkMode={darkMode}>Jefe:</Span>
+                                                <Span  darkMode={darkMode} className="font-medium ">{dep.jefe?.nombre} {dep.jefe?.apellido_paterno}</Span>
                                             </div>
                                             <div className="flex items-center gap-2">
                                                 <Briefcase className="w-4 h-4 text-gray-400" />
-                                                <span className="text-gray-600">{dep.personal?.length} empleados</span>
+                                                <Span  darkMode={darkMode} className="">{dep.personal?.length} empleados</Span>
                                             </div>
                                             <div className="flex items-center gap-2">
                                                 <Briefcase className="w-4 h-4 text-gray-400" />
-                                                <span className="text-gray-600">{dep.puestos?.length} puestos</span>
+                                                <Span  darkMode={darkMode} className="">{dep.puestos?.length} puestos</Span>
                                             </div>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-2">
 
                                         <button
+                                            onClick={()=>handleRedirect(dep)}
                                             title="save"
                                             className="p-2 text-blue-600 hover:bg-blue-50 rounded-lg transition-colors">
                                             <Edit2 className="w-5 h-5" />
@@ -138,6 +142,6 @@ export default function Departments() {
                     </div>
                 )}
             </div>
-        </div>
+        </Container>
     );
 }

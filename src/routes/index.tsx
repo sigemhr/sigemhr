@@ -12,6 +12,7 @@ import DirectorioPage from '../pages/Empleados/Directorio';
 import DirectorioDetalle from '../pages/Empleados/Directorio/[id]';
 import CrearEmpleado from '../pages/Empleados/Directorio/nuevo';
 import Departments from "../pages/configuration/Empresa/Departments";
+import DepartmentEditOrCreate from "../pages/configuration/Empresa/Departments/DepartmentEditOrCreate.tsx";
 
 const AppRouter: React.FC = () => {
   return (
@@ -35,6 +36,7 @@ const AppRouter: React.FC = () => {
 
                 {/*rutas de configuraciones*/}
                 <Route path='/configuracion/empresa/departamentos' element={<Departments/>}/>
+                <Route path='/ configuracion/empresa/departamentos/editar' element={<DepartmentEditOrCreate/>}/>
 
             </Route>
 
