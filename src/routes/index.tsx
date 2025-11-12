@@ -36,7 +36,7 @@ const AppRouter: React.FC = () => {
 
                 {/*rutas de configuraciones*/}
                 <Route path='/configuracion/empresa/departamentos' element={<Departments/>}/>
-                <Route path='/ configuracion/empresa/departamentos/editar' element={<DepartmentEditOrCreate/>}/>
+                <Route path='/configuracion/empresa/departamentos/editar' element={<DepartmentEditOrCreate/>}/>
 
             </Route>
 

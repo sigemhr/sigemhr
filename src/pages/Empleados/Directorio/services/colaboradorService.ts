@@ -13,6 +13,7 @@ export class ColaboradorService {
 
     return response.result
   }
+  
   async getPerPage(params:number): Promise<EmpleadoResponse> {
     const response = await request.get(`${baseURL}?page=${params}`,{});
 

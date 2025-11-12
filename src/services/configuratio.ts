@@ -3,7 +3,7 @@
 // **testing
 // **productionapi
 // "homepage": "https://sil83.com/", //poner un package.json
-export const productionMode:string = 'working';
+export const productionMode:string = 'development';
 let pathApiBase
 let pathImages
 let pathBase
