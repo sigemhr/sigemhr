@@ -1,135 +1,55 @@
-# Sistema de Recursos Humanos
+# Alexis Duarte García
 
-Un sistema moderno de gestión de recursos humanos construido con tecnologías web de última generación.
+### Senior Full Stack Developer · PHP / Laravel · React / TypeScript
 
-## 🚀 Tecnologías
+I build enterprise web and mobile applications, from API design and database modeling to deployment. My experience includes SAP ERP integration, business management systems, human resources platforms and Linux infrastructure.
 
-- **React 18** con TypeScript
-- **Vite** - Build tool ultrarrápido
-- **Tailwind CSS** - Framework de CSS utility-first
-- **TSX** - TypeScript + JSX
+Based in **Cancún, Mexico** · Open to **remote and hybrid opportunities**
 
-## 📋 Características
+[LinkedIn](https://www.linkedin.com/in/alexis-duarte-1a1a61138/) · [Email](mailto:alexisduarte1512@gmail.com)
 
-- Gestión de empleados
-- Control de asistencias
-- Administración de nómina
-- Gestión de vacaciones y permisos
-- Evaluaciones de desempeño
-- Módulo de reclutamiento
-- Reportes y analíticas
+## Experience
 
-## 🛠️ Instalación
+- **Hanan Distribuciones — Full Stack Developer, full-time (2020–present):** internal ERP development with React, Laravel and MySQL; bidirectional SAP ERP integration for inventory and business transactions.
+- **SIL83 — External Consultant & Developer (2022–present):** Laravel APIs, React/TypeScript dashboards and React Native/Expo applications for notary and HR workflows; Linux infrastructure and automated deployments.
+- **7+ years in software development**, including inventory, sales, residential management and educational platforms.
 
-### Prerrequisitos
+## Technical focus
 
-- Node.js 18 o superior
-- npm o yarn
+| Area | Technologies |
+| --- | --- |
+| Backend & architecture | PHP, Laravel, Node.js, Express, REST APIs, Domain-Driven Design |
+| Frontend | React, TypeScript, JavaScript, Tailwind CSS |
+| Mobile | React Native, Expo, Flutter, Dart |
+| Data & integrations | MySQL, MariaDB, SQLite, SAP ERP |
+| Infrastructure | Linux, Nginx, PHP-FPM, Cloudflare, GitHub Actions, CI/CD |
 
-### Pasos de instalación
+## Public project
 
-1. Clona el repositorio:
-```bash
-git clone https://github.com/tu-usuario/sistema-rh.git
-cd sistema-rh
-```
+### [PuntoZen POS](https://github.com/sigemhr/posapp)
 
-2. Instala las dependencias:
-```bash
-npm install
-```
+Flutter/Dart point-of-sale application for small retail businesses. The repository includes checkout, inventory, customer credit and reporting screens, with Provider state management and local persistence using SharedPreferences. **Project in development.**
 
-3. Crea un archivo `.env` basado en `.env.example`:
-```bash
-cp .env.example .env
-```
+## Additional work
 
-4. Configura las variables de entorno necesarias en el archivo `.env`
+- **VikyRH:** HR SaaS development with Laravel, Inertia, React and TypeScript, organized into domain-based modules.
+- **vikyPOS:** a separate Flutter project exploring an offline-first architecture with Riverpod and Drift/SQLite.
 
-## 🚦 Uso
+These projects are described separately from the public PuntoZen repository. Client systems and production infrastructure are represented by experience summaries rather than published source code.
 
-### Modo desarrollo
+## En español
 
-```bash
-npm run dev
-```
+Soy desarrollador Full Stack con más de 7 años de experiencia en sistemas empresariales. Mi especialidad es **PHP/Laravel, React y TypeScript**, con experiencia en integración con **SAP ERP**, desarrollo móvil y administración de infraestructura Linux.
 
-El servidor de desarrollo estará disponible en `http://localhost:5173`
-
-### Build para producción
-
-```bash
-npm run build
-```
-
-### Preview del build
-
-```bash
-npm run preview
-```
-
-### Linting
-
-```bash
-npm run lint
-```
-
-## 📁 Estructura del proyecto
-
-```
-sistema-rh/
-├── src/
-│   ├── assets/          # Recursos estáticos
-│   ├── components/      # Componentes reutilizables
-│   ├── pages/          # Páginas de la aplicación
-│   ├── hooks/          # Custom hooks
-│   ├── services/       # Servicios y API calls
-│   ├── types/          # Definiciones de TypeScript
-│   ├── utils/          # Funciones utilitarias
-│   ├── App.tsx         # Componente principal
-│   └── main.tsx        # Punto de entrada
-├── public/             # Archivos públicos
-├── index.html
-├── package.json
-├── tsconfig.json
-├── vite.config.ts
-└── tailwind.config.js
-```
-
-## 🎨 Configuración de Tailwind
-
-El proyecto utiliza Tailwind CSS con configuración personalizada. Puedes modificar los estilos en `tailwind.config.js`.
-
-## 🔧 Scripts disponibles
-
-- `npm run dev` - Inicia el servidor de desarrollo
-- `npm run build` - Genera el build de producción
-- `npm run preview` - Previsualiza el build de producción
-- `npm run lint` - Ejecuta el linter
-- `npm run type-check` - Verifica los tipos de TypeScript
-
-## 🤝 Contribución
-
-Las contribuciones son bienvenidas. Por favor:
-
-1. Fork el proyecto
-2. Crea una rama para tu feature (`git checkout -b feature/AmazingFeature`)
-3. Commit tus cambios (`git commit -m 'Add some AmazingFeature'`)
-4. Push a la rama (`git push origin feature/AmazingFeature`)
-5. Abre un Pull Request
-
-## 📝 Licencia
-
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
-
-## 👥 Autores
-
-- Tu Nombre - [@sigemhr](https://github.com/sigemhr)
-
-## 📞 Contacto
-
-Para preguntas o soporte, contacta a: sigemhr@gmail.com
+Busco oportunidades como **Senior Full Stack Developer**. Mi inglés permite leer y escribir documentación técnica y mantener conversaciones básicas.
 
 ---
 
-Desarrollado con ❤️ usando React + Vite + Tailwind CSS
+Looking for a developer who can connect business workflows, APIs and user interfaces? [Let's talk](mailto:alexisduarte1512@gmail.com).
+
+<details>
+<summary>HR dashboard documentation in this repository</summary>
+
+This repository also contains a React/TypeScript HR dashboard. Its original project documentation is preserved in [docs/HR_DASHBOARD.md](docs/HR_DASHBOARD.md).
+
+</details>
