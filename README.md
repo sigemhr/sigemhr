@@ -24,6 +24,14 @@ Based in **Cancún, Mexico** · Open to **remote and hybrid opportunities**
 | Data & integrations | MySQL, MariaDB, SQLite, SAP ERP |
 | Infrastructure | Linux, Nginx, PHP-FPM, Cloudflare, GitHub Actions, CI/CD |
 
+## Enterprise work & confidentiality
+
+Much of my professional work lives in private repositories because it involves proprietary business systems. I share my responsibilities, technical approach and delivered capabilities without exposing client code, internal data or infrastructure.
+
+- [Hanan Distribuciones — ERP & SAP integration](docs/CASE_STUDIES.md#hanan-distribuciones--erp--sap-integration)
+- [SIL83 — Notary operations & Human Resources](docs/CASE_STUDIES.md#sil83--notary-operations--human-resources)
+- [Casos de estudio en español](docs/CASE_STUDIES.md#casos-de-estudio-en-español)
+
 ## Public project
 
 ### [PuntoZen POS](https://github.com/sigemhr/posapp)
@@ -38,6 +46,8 @@ Flutter/Dart point-of-sale application for small retail businesses. The reposito
 These projects are described separately from the public PuntoZen repository. Client systems and production infrastructure are represented by experience summaries rather than published source code.
 
 ## En español
+
+Gran parte de mi experiencia corresponde a sistemas empresariales privados sujetos a confidencialidad. Comparto descripciones de mi trabajo, respetando la propiedad intelectual y los datos de cada organización.
 
 Soy desarrollador Full Stack con más de 7 años de experiencia en sistemas empresariales. Mi especialidad es **PHP/Laravel, React y TypeScript**, con experiencia en integración con **SAP ERP**, desarrollo móvil y administración de infraestructura Linux.
 
